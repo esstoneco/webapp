@@ -2,13 +2,14 @@
   "name": "marble-stoneik-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://esstoneco.github.io/webapp/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://github.com/esstoneco/web.git",
+    
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
