@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 import {
-  FaPhone,
+ 
   FaEnvelope,
   FaMapMarkerAlt,
   FaClock,
