@@ -55,9 +55,7 @@ export const router = createBrowserRouter([
     path: "*",
     element: <NotFound />
   },
-  {
-    base:
-  },
+  
 ]);
 
 export const links = [
