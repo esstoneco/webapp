@@ -19,7 +19,7 @@ export default function ProjectCTA({
         </p>
 
         <h2 className="mb-8 text-5xl font-bold md:text-6xl">
-          Let's Create Something Timeless
+          {title}
         </h2>
 
         <p className="mx-auto mb-10 max-w-2xl text-lg leading-8 text-stone-300">
