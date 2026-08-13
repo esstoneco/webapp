@@ -3,7 +3,7 @@ import FadeIn from "../components/common/FadeIn";
 
 import MarbleCard from "../components/common/MarbleCard";
 import ProductFilter from "../components/products/ProductFilter";
-
+import { Link } from "react-router-dom";
 import { products } from "../data/products";
 
 const categories = [
@@ -84,6 +84,56 @@ const [sortBy, setSortBy] =
   />
 
 </div>
+      {featuredProduct && (
+  <section className="mb-20">
+    <div className="overflow-hidden rounded-3xl bg-stone-100">
+      <div className="grid lg:grid-cols-2">
+
+        {/* IMAGE */}
+
+        <div className="relative min-h-[400px] overflow-hidden">
+          <img
+            src={featuredProduct.image}
+            alt={featuredProduct.name}
+            className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
+          />
+        </div>
+
+
+        {/* CONTENT */}
+
+        <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16">
+
+          <p className="mb-4 uppercase tracking-[5px] text-stone-500">
+            Featured Marble
+          </p>
+
+          <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+            {featuredProduct.name}
+          </h2>
+
+          <p className="mb-8 max-w-xl text-lg leading-8 text-stone-600">
+            {featuredProduct.shortDescription}
+          </p>
+
+          <div>
+            <Link
+              to={`/products/${featuredProduct.slug}`}
+              className="inline-flex items-center rounded-full bg-black px-8 py-4 font-semibold text-white transition duration-300 hover:bg-[#C8A97E] hover:text-black"
+            >
+              Explore Marble
+              <span className="ml-3">
+                →
+              </span>
+            </Link>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+)}
 <div className="mb-10 flex flex-wrap gap-3">
 
   {categories.map((category) => (
