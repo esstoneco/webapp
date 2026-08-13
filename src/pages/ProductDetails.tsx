@@ -20,7 +20,6 @@ export default function ProductDetails() {
   if (!product) {
     return (
       <section className="flex min-h-[70vh] items-center justify-center px-6">
-
         <div className="text-center">
 
           <h1 className="mb-5 text-5xl font-bold">
@@ -39,14 +38,12 @@ export default function ProductDetails() {
           </Link>
 
         </div>
-
       </section>
     );
   }
 
   return (
     <>
-
       <ProductHero
         name={product.name}
         category={product.category}
@@ -62,9 +59,9 @@ export default function ProductDetails() {
         description={product.description}
       />
 
-      {product.specifications && (
-        <ProductSpecs specifications={product.specifications} />
-      )}
+      <ProductSpecs
+        specifications={product.specifications}
+      />
 
       <ProductApplications
         applications={product.applications}
@@ -77,7 +74,6 @@ export default function ProductDetails() {
       <QuoteCTA
         productName={product.name}
       />
-
     </>
   );
 }
