@@ -17,7 +17,10 @@ export const products: Product[] = [
       extraWhite,
     ],
     category: "Slabs",
-
+    color: "Bright white",
+    finish: "Polished / Honed",
+    origin: "Nestos, Greece",
+    
     description:
       "Extra White Nestos Marble is a premium natural stone characterized by its bright white appearance and elegant crystalline structure. It is suitable for demanding architectural and interior applications.",
 
@@ -51,7 +54,9 @@ export const products: Product[] = [
       whiteVeins,
     ],
     category: "Tiles",
-
+    color: "White with natural veining",
+    finish: "Polished / Honed",
+    origin: "Nestos, Greece",
     description:
       "White Veins marble combines a clean white background with distinctive natural veining, creating an elegant material for contemporary architectural spaces.",
 
@@ -84,7 +89,10 @@ export const products: Product[] = [
       blackVeins,
     ],
     category: "Slabs",
-
+    color: "Light stone with dark veining",
+    finish: "Polished / Honed",
+    origin: "Nestos, Greece",
+    
     description:
       "Black Veins marble features dramatic dark veining across a light natural stone background, making it suitable for distinctive luxury interiors.",
 
@@ -117,7 +125,10 @@ export const products: Product[] = [
       pinkVeins,
     ],
     category: "Blocks",
-
+    color: "White with subtle pink veining",
+    finish: "Polished / Honed",
+    origin: "Nestos, Greece",
+    
     description:
       "Pink Veins marble presents subtle pink natural veining within a refined white stone background, providing a distinctive character for bespoke architectural projects.",
 
