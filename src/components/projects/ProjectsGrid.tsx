@@ -1,4 +1,4 @@
-import ProjectCard from "/Users/pirrosn/marble-stoneik-react/src/components/projects/ProjectCard.tsx";
+import ProjectCard from "webapp/src/components/projects/ProjectCard.tsx";
 
 import { projects } from "../../data/projects";
 
