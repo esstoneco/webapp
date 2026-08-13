@@ -17,11 +17,7 @@ const categories = [
 export default function Products() {
   const [active, setActive] = useState("All");
 
-  const filtered =
-    active === "All"
-      ? products
-      : products.filter((product) => product.category === active);
-
+  
   const featuredProduct =
   products.find(
     (product) => product.featured
