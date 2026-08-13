@@ -12,7 +12,7 @@ export interface Product {
   description: string;
 
   applications: string[];
-
+  specifications?: string[];
   color: string;
   finish: string;
   origin: string;
