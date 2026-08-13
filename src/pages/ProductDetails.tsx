@@ -62,9 +62,9 @@ export default function ProductDetails() {
         description={product.description}
       />
 
-      <ProductSpecs
-        specifications={product.specifications}
-      />
+      {product.specifications && (
+        <ProductSpecs specifications={product.specifications} />
+      )}
 
       <ProductApplications
         applications={product.applications}
