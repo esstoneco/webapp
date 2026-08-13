@@ -10,7 +10,7 @@ import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Projects from "../pages/Projects";
 import ProductDetails from "../pages/ProductDetails";
-import ProjectDetails from "/Users/pirrosn/marble-stoneik-react/src/pages/ProductDetails.tsx";
+import ProjectDetails from "/webapp/src/pages/ProductDetails.tsx";
 
 export const router = createBrowserRouter([
   {
