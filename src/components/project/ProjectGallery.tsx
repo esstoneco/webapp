@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import ProjectLightbox from "/Users/pirrosn/marble-stoneik-react/src/components/project/ProjectLightbox.tsx";
+import ProjectLightbox from "webapp/src/components/project/ProjectLightbox.tsx";
 
 type Props = {
   images: string[];
