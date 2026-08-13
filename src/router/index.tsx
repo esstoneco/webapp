@@ -10,7 +10,7 @@ import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Projects from "../pages/Projects";
 import ProductDetails from "../pages/ProductDetails";
-import ProjectDetails from "src/pages/ProductDetails.tsx";
+import ProjectDetails from "../pages/ProjectDetails";
 
 export const router = createBrowserRouter([
   {
@@ -49,12 +49,15 @@ export const router = createBrowserRouter([
   path: "projects/:slug",
   element: <ProjectDetails />,
 },
-    ]
+    ],
   },
   {
     path: "*",
     element: <NotFound />
-  }
+  },
+  {
+    base:
+  },
 ]);
 
 export const links = [
