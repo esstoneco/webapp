@@ -2,7 +2,7 @@
   "name": "marble-stoneik-react",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://esstoneco.github.io/webapp/",
+  "homepage": "https://esstoneco.github.io/webapp",
   "type": "module",
   "scripts": {
     "dev": "vite",
