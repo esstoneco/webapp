@@ -1,4 +1,4 @@
-import Button from "../common/Button";
+
 import {Link} from "react-router-dom";
 
 export default function CTA(){
