@@ -16,14 +16,14 @@ Ready for your next project?
 <div className="flex items-center justify-center min-h-screen">
   <Link
     to="/contact"
-    className="rounded-full px-8 py-4 font-semibold transition duration-300 bg-[#C8A97E] text-white hover:bg-[#b08f65]"
+    className="flex items-center justify-center rounded-full px-8 py-4 font-semibold transition duration-300 bg-[#C8A97E] text-white hover:bg-[#b08f65]"
   >
     Request Quote
   </Link>
 
   <Link
     to="/about"
-    className="rounded-full px-8 py-4 font-semibold transition duration-300 border border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E] hover:text-white"
+    className="flex items-center justify-center rounded-full px-8 py-4 font-semibold transition duration-300 border border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E] hover:text-white"
   >
     Learn More
   </Link>
