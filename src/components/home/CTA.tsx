@@ -23,7 +23,7 @@ Ready for your next project?
 
   <Link
     to="/about"
-    className="flex items-center justify-center rounded-full px-8 py-4 font-semibold transition duration-300 border border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E] hover:text-white"
+    className="flex justify-center rounded-full px-8 py-4 font-semibold transition duration-300 border border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E] hover:text-white"
   >
     Learn More
   </Link>
