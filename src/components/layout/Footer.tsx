@@ -82,7 +82,7 @@ export default function Footer() {
       <br />
       <br /><br />
       <br />
-      <div className="flex mx-auto" >
+      <div className="flex items-center justify-center min-h-screen">
             <div className="col-md-4" >
                 <h4 data-i18n="ike_title">Στοιχεία Δημοσιότητας Ι.Κ.Ε.</h4>
                 <ul>
