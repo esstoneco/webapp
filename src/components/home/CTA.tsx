@@ -13,7 +13,7 @@ Ready for your next project?
 
 </h2>
 
-<div>
+<div className="mt-12 text-center">
   <Link
     to="/contact"
     >
