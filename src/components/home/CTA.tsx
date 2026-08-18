@@ -13,17 +13,17 @@ Ready for your next project?
 
 </h2>
 
-<div className="flex gap-4">
+<div>
   <Link
     to="/contact"
-    className="flex justify-center min-h-screen rounded-full px-8 py-4 font-semibold transition duration-300 bg-[#C8A97E] text-white hover:bg-[#b08f65]"
+    className="justify-center min-h-screen rounded-full px-8 py-4 font-semibold transition duration-300 bg-[#C8A97E] text-white hover:bg-[#b08f65]"
   >
     Request Quote
   </Link>
 
   <Link
     to="/about"
-    className="flex justify-center rounded-full px-8 py-4 font-semibold transition duration-300 border border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E] hover:text-white"
+    className="justify-center rounded-full px-8 py-4 font-semibold transition duration-300 border border-[#C8A97E] text-[#C8A97E] hover:bg-[#C8A97E] hover:text-white"
   >
     Learn More
   </Link>
