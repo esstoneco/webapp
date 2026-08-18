@@ -13,7 +13,7 @@ Ready for your next project?
 
 </h2>
 
-<div >
+<div className="flex gap-4">
   <Link
     to="/contact"
     className="flex justify-center min-h-screen rounded-full px-8 py-4 font-semibold transition duration-300 bg-[#C8A97E] text-white hover:bg-[#b08f65]"
