@@ -1,4 +1,5 @@
 import Button from "../common/Button";
+import { Link } from "react-router-dom";
 
 export default function CTA(){
 
@@ -12,19 +13,19 @@ Ready for your next project?
 
 </h2>
 
-<a
-href="/contact"
-className=""
->
+<div className="flex gap-4">
+  <Link
+    to="/contact"
+    >
+    Request Quote
+  </Link>
 
-<Button>Request Quote</Button>
-
-<Button variant="secondary">
-  Learn More
-</Button>
-
-
-</a>
+  <Link
+    to="/about"
+  >
+    Learn More
+  </Link>
+</div>
 
 </section>
 
