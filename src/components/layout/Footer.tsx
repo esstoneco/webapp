@@ -82,7 +82,7 @@ export default function Footer() {
       <br />
       <br /><br />
       <br />
-      <div className="flex flex-col md:flex-row justify-between items-start gap-6 max-w-6xl mx-auto" >
+      <div className="flex mx-auto" >
             <div className="col-md-4" >
                 <h4 data-i18n="ike_title">Στοιχεία Δημοσιότητας Ι.Κ.Ε.</h4>
                 <ul>
