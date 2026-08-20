@@ -71,7 +71,7 @@ architectural projects around the world.
             whileTap={{ scale:.95 }}
             className="rounded-full bg-white px-8 py-4 font-semibold text-black"
           >
-           <Link to:"./products"> Explore Collection <Link/>
+           <Link to:"/products"> Explore Collection <Link/>
           </motion.a>
 
         </div>
