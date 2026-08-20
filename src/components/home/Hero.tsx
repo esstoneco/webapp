@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import hero from "../../assets/images/hero.jpg";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -70,7 +71,7 @@ architectural projects around the world.
             whileTap={{ scale:.95 }}
             className="rounded-full bg-white px-8 py-4 font-semibold text-black"
           >
-            Explore Collection
+           <Link to:"./products"> Explore Collection <Link/>
           </motion.a>
 
         </div>
