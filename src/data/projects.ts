@@ -5,8 +5,8 @@ import type { Project } from "../types/project";
 
 import project1 from "../assets/images/projects/bathrrom.jpg";
 import project2 from "../assets/images/projects/lobbygerakina.jpg";
-import project3 from "../assets/images/projects/flooring1.jpg";
-import project4 from "../assets/images/projects/hotel1.jpg";
+import project3 from "../assets/images/projects/skales 2.jpg";
+import project4 from "../assets/images/projects/skales.jpg";
 
 
 export const projects: Project[] = [
