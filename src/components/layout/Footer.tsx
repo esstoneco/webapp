@@ -70,7 +70,7 @@ export default function Footer() {
 
             <br/>
 
-            +30 XXX XXX XXXX
+            
 
           </p>
 
@@ -82,7 +82,7 @@ export default function Footer() {
       <br />
       <br /><br />
       <br />
-      <div className="flex items-center justify-center min-h-screen">
+		{ /* <div className="flex items-center justify-center min-h-screen">
             <div className="col-md-4" >
                 <h4 data-i18n="ike_title">Στοιχεία Δημοσιότητας Ι.Κ.Ε.</h4>
                 <ul>
@@ -124,7 +124,7 @@ export default function Footer() {
 
         </div>
         
-    
+	  */}
 
       <div className="border-t border-stone-800 py-6 text-center text-stone-500">
 
