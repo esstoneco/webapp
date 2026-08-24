@@ -7,6 +7,7 @@ import project1 from "../assets/images/projects/eikona4.jpg";
 import project2 from "../assets/images/projects/lobbygerakina.jpg";
 import project3 from "../assets/images/projects/skales 2.jpg";
 import project4 from "../assets/images/projects/skales.jpg";
+import project5 from "../assets/images/project/eikona5.jpg";
 
 
 export const projects: Project[] = [
@@ -160,4 +161,38 @@ export const projects: Project[] = [
 
     client: "Commercial Client",
   },
+    id: 5,
+
+    slug: "hotel-mytilene",
+
+    title: "Modern Hotel ",
+
+    location: "Mytilene, Greece",
+
+    year: "2026",
+
+    category: "Commercial",
+
+    marble: "Nestos Black Veins",
+
+    image: project5,
+
+    gallery: [
+      project5
+    ],
+
+    description:
+      "A commecial project using Nestos extra marble.",
+
+    scope: [
+      "Feature Walls",
+      "Bathrooms",
+      "Flooring",
+      "Staircases",
+      "Interior Details",
+    ],
+
+    client: "Commercial Client",
+  },
+
 ];
