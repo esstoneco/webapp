@@ -165,7 +165,7 @@ export const projects: Project[] = [
 
     slug: "hotel-mytilene",
 
-    title: "Modern Hotel ",
+    title: "Modern Hotel",
 
     location: "Mytilene, Greece",
 
@@ -178,7 +178,7 @@ export const projects: Project[] = [
     image: project5,
 
     gallery: [
-      project5
+      project5,
     ],
 
     description:
