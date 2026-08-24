@@ -100,7 +100,7 @@ export const projects: Project[] = [
 
     category: "Residential",
 
-    marble: "Nestos Black Veins",
+    marble: "Nestos pink Veins",
 
     image: project3,
 
