@@ -7,7 +7,7 @@ import project1 from "../assets/images/projects/eikona4.jpg";
 import project2 from "../assets/images/projects/lobbygerakina.jpg";
 import project3 from "../assets/images/projects/skales 2.jpg";
 import project4 from "../assets/images/projects/skales.jpg";
-import project5 from "../assets/images/project/eikona5.jpg";
+import project5 from "../assets/images/project/eikona6.jpg";
 
 
 export const projects: Project[] = [
