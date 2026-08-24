@@ -4,7 +4,7 @@ import type { Project } from "../types/project";
 // Replace these imports with your actual project photographs later.
 
 import project1 from "../assets/images/projects/eikona4.jpg";
-import project2 from "../assets/images/projects/lobbygerakina.jpg";
+import project2 from "../assets/images/projects/file_000000005ad08243a870a4b91fbcae45.png";
 import project3 from "../assets/images/projects/skales 2.jpg";
 import project4 from "../assets/images/projects/skales.jpg";
 import project5 from "../assets/images/projects/file_00000000114c81f59c0d193a76a2c8b5.png";
