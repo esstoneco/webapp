@@ -161,6 +161,7 @@ export const projects: Project[] = [
 
     client: "Commercial Client",
   },
+  {
     id: 5,
 
     slug: "hotel-mytilene",
