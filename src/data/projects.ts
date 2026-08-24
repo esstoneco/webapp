@@ -138,7 +138,7 @@ export const projects: Project[] = [
 
     category: "Commercial",
 
-    marble: "Nestos Pink Veins",
+    marble: "Nestos black Veins",
 
     image: project4,
 
