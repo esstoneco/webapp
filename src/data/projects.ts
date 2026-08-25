@@ -14,15 +14,15 @@ export const projects: Project[] = [
   {
     id: 1,
 
-    slug: "luxury-hotel-athens",
+    slug: "residence-thessaloniki",
 
-    title: "Luxury Hotel Athens",
+    title: "Lixury residence Thessaloniki",
 
-    location: "Athens, Greece",
+    location: "Thessaloniki, Greece",
 
     year: "2025",
 
-    category: "Hospitality",
+    category: "Residential",
 
     marble: "Nestos Extra White",
 
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     ],
 
     description:
-      "A contemporary hospitality project featuring Greek marble throughout selected interior and architectural spaces. The project combines natural stone with modern architectural detailing to create a refined and timeless environment.",
+      "A contemporary residential project featuring Greek marble throughout selected interior and architectural spaces. The project combines natural stone with modern architectural detailing to create a refined and timeless environment.",
 
     scope: [
       "Interior Marble",
@@ -52,17 +52,17 @@ export const projects: Project[] = [
   {
     id: 2,
 
-    slug: "private-villa-mykonos",
+    slug: "luxury-hotel-chalkidiki",
 
-    title: "Private Villa Mykonos",
+    title: "Luxury Hotel Chalkidiki",
 
-    location: "Mykonos, Greece",
+    location: "Chalkidiki, Greece",
 
     year: "2024",
 
-    category: "Residential",
+    category: "Hospitality",
 
-    marble: "Nestos White Veins",
+    marble: "Nestos Pink Veins",
 
     image: project2,
 
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     ],
 
     description:
-      "A private residential project where natural Greek marble was used to create elegant interior and exterior architectural elements.",
+      "A hospitality project where natural Greek marble was used to create elegant interior and exterior architectural elements.",
 
     scope: [
       "Bathrooms",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
 
     category: "Residential",
 
-    marble: "Nestos pink Veins",
+    marble: "Nestos black Veins",
 
     image: project3,
 
