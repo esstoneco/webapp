@@ -16,7 +16,7 @@ export const projects: Project[] = [
 
     slug: "residence-thessaloniki",
 
-    title: "Lixury residence Thessaloniki",
+    title: "Elegant residence Thessaloniki",
 
     location: "Thessaloniki, Greece",
 
