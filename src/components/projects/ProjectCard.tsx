@@ -15,6 +15,8 @@ description:string;
 
 image:string;
 
+           
+
 };
 
 export default function ProjectCard({
@@ -100,14 +102,6 @@ className="h-80 w-full object-cover transition duration-700 hover:scale-110"
 </div>
 
 </div>
-
-<Link
-            to="/projects"
-            className="rounded-full bg-black px-6 py-3 text-white"
-          > View Project 
-       </Link>
-
-
 
 
 </div>
