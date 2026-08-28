@@ -104,7 +104,7 @@ className="h-80 w-full object-cover transition duration-700 hover:scale-110"
 <Link
             to="/projects"
             className="rounded-full bg-black px-6 py-3 text-white"
-          >
+          > View Project 
        </Link>
 
 
