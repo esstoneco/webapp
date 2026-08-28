@@ -26,7 +26,7 @@ export const projects: Project[] = [
 
     marble: "Nestos Extra White",
 
-    image: project1,
+    image: "src/assets/images/projects/project1/banio23.png",
 
     gallery: [
       project1,
