@@ -33,7 +33,7 @@ export const projects: Project[] = [
     gallery: [
       p1img2,
       p1img3,
-      project1,
+      p1img1,
       project1,
     ],
 
