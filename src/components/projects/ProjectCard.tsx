@@ -100,11 +100,14 @@ className="h-80 w-full object-cover transition duration-700 hover:scale-110"
 
 </div>
 
-<button className="rounded-full bg-black px-6 py-3 text-white">
+<Link
+            to="/projects"
+            className="rounded-full bg-black px-6 py-3 text-white"
+          >
+       </Link>
 
-View Project
 
-</button>
+
 
 </div>
 
