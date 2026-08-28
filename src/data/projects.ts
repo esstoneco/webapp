@@ -3,7 +3,6 @@ import type { Project } from "../types/project";
 // Temporary images.
 // Replace these imports with your actual project photographs later.
 
-import project1 from "../assets/images/projects/eikona4.jpg";
 import project2 from "../assets/images/projects/file_000000005ad08243a870a4b91fbcae45.png";
 import project3 from "../assets/images/projects/file_00000000ea1c81f4ba73bd682a7465e9.png";
 import project4 from "../assets/images/projects/file_00000000152881f489c15585598af21c.png";
