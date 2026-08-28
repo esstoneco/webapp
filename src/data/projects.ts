@@ -9,6 +9,8 @@ import project3 from "../assets/images/projects/file_00000000ea1c81f4ba73bd682a7
 import project4 from "../assets/images/projects/file_00000000152881f489c15585598af21c.png";
 import project5 from "../assets/images/projects/file_00000000114c81f59c0d193a76a2c8b5.png";
 import p1img1 from "../assets/images/projects/project1/banio23.png";
+import p1img2 from "../assets/images/projects/project1/file_000000002448820c8ca843fefffb8abd.png";
+
 
 export const projects: Project[] = [
   {
@@ -29,7 +31,7 @@ export const projects: Project[] = [
     image: p1img1,
 
     gallery: [
-      project1,
+      p1img2,
       project1,
       project1,
       project1,
