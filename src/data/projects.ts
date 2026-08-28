@@ -8,7 +8,7 @@ import project2 from "../assets/images/projects/file_000000005ad08243a870a4b91fb
 import project3 from "../assets/images/projects/file_00000000ea1c81f4ba73bd682a7465e9.png";
 import project4 from "../assets/images/projects/file_00000000152881f489c15585598af21c.png";
 import project5 from "../assets/images/projects/file_00000000114c81f59c0d193a76a2c8b5.png";
-import pro1 from "../assets/images/projects/project1";
+
 
 export const projects: Project[] = [
   {
