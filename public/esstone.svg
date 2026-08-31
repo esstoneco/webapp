@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">ES STONE logo</title>
+  <desc id="desc">Luxury marble and natural stone logo for ES STONE.</desc>
+
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8c641f"/>
+      <stop offset="0.25" stop-color="#f4d27b"/>
+      <stop offset="0.5" stop-color="#b8862d"/>
+      <stop offset="0.75" stop-color="#ffe39a"/>
+      <stop offset="1" stop-color="#9b6d22"/>
+    </linearGradient>
+
+    <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111318"/>
+      <stop offset="1" stop-color="#3a3c40"/>
+    </linearGradient>
+
+    <pattern id="marble" width="180" height="180" patternUnits="userSpaceOnUse">
+      <rect width="180" height="180" fill="#f7f6f2"/>
+      <path d="M-20 45 C35 20 60 75 105 50 S155 20 205 45" fill="none"
+            stroke="#b9b7b0" stroke-width="5" opacity=".65"/>
+      <path d="M-25 120 C25 90 65 145 105 115 S155 85 205 125" fill="none"
+            stroke="#8f8c84" stroke-width="2.5" opacity=".55"/>
+      <path d="M20 175 C55 130 80 155 120 105 S165 75 195 40" fill="none"
+            stroke="#c69b45" stroke-width="4" opacity=".65"/>
+      <path d="M15 175 C55 135 82 160 123 110 S168 80 200 42" fill="none"
+            stroke="#ffffff" stroke-width="2" opacity=".9"/>
+    </pattern>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <!-- transparent background -->
+
+  <!-- ES monogram -->
+  <g transform="translate(600 300)" text-anchor="middle" filter="url(#shadow)">
+    <text x="-55" y="115" font-family="Georgia, 'Times New Roman', serif"
+          font-size="330" font-weight="600" fill="url(#dark)">E</text>
+
+    <text x="75" y="135" font-family="Georgia, 'Times New Roman', serif"
+          font-size="350" font-weight="600" fill="url(#marble)"
+          stroke="url(#gold)" stroke-width="7" paint-order="stroke">S</text>
+
+    <path d="M-175 150 C-95 115 -20 105 80 115 C145 122 185 105 220 82"
+          fill="none" stroke="url(#gold)" stroke-width="3"/>
+  </g>
+
+  <!-- mountain / stone peak -->
+  <g transform="translate(600 515)" fill="none" stroke="url(#gold)" stroke-width="5">
+    <path d="M-105 48 L0 -48 L105 48 L62 25 L30 42 L0 4 L-35 42 L-62 25 Z"/>
+  </g>
+  <path d="M170 563 H445 M755 563 H1030" stroke="url(#gold)" stroke-width="4"/>
+
+  <!-- wordmark -->
+  <text x="600" y="665" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="112" letter-spacing="13" font-weight="600">
+    <tspan fill="url(#gold)">ES</tspan><tspan fill="url(#dark)"> STONE</tspan>
+  </text>
+
+  <!-- descriptor -->
+  <path d="M170 720 H300 M900 720 H1030" stroke="url(#gold)" stroke-width="3"/>
+  <text x="600" y="728" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="25" letter-spacing="8" fill="#77736b">
+    MARBLE • GRANITE • NATURAL STONE
+  </text>
+
+  <!-- subtle baseline -->
+  <path d="M350 770 H850" stroke="#d2c5a8" stroke-width="1"/>
+</svg>
