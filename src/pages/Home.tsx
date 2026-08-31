@@ -7,7 +7,6 @@ import WhyChooseUs from "../components/home/WhyChooseUs";
 import FadeIn from "../components/common/FadeIn";
 import ProjectsPreview from "../components/home/ProjectsPreview";
 import PageBanner from "../components/common/PagaBanner";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
