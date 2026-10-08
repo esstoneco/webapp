@@ -30,3 +30,5 @@ a{
 text-decoration:none;
 
 }
+/* Long German and Greek headings must fit narrow screens. */
+h1, h2, h3 { overflow-wrap: anywhere; }
