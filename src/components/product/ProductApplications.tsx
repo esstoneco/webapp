@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import {
   FaBuilding,
   FaHome,
@@ -25,6 +26,8 @@ const icons = [
 export default function ProductApplications({
   applications,
 }: Props) {
+  const tr = useText();
+
   return (
     <section className="bg-stone-100 py-24">
 
@@ -35,12 +38,10 @@ export default function ProductApplications({
           <div className="mb-16 text-center">
 
             <p className="mb-3 uppercase tracking-[6px] text-stone-500">
-              Applications
-            </p>
+              {tr("Applications")}</p>
 
             <h2 className="text-5xl font-bold">
-              Designed for Architecture
-            </h2>
+              {tr("Designed for Architecture")}</h2>
 
           </div>
 
@@ -59,7 +60,7 @@ export default function ProductApplications({
                 </div>
 
                 <h3 className="text-xl font-semibold">
-                  {application}
+                  {tr(application)}
                 </h3>
 
               </div>

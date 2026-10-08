@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { Link } from "react-router-dom";
 
 import { products } from "../../data/products";
@@ -11,6 +12,8 @@ type Props = {
 export default function RelatedProducts({
   currentProductId,
 }: Props) {
+  const tr = useText();
+
   const relatedProducts = products
     .filter((product) => product.id !== currentProductId)
     .slice(0, 3);
@@ -25,12 +28,10 @@ export default function RelatedProducts({
           <div>
 
             <p className="mb-3 uppercase tracking-[6px] text-stone-500">
-              Explore More
-            </p>
+              {tr("Explore More")}</p>
 
             <h2 className="text-5xl font-bold">
-              Related Marble
-            </h2>
+              {tr("Related Marble")}</h2>
 
           </div>
 
@@ -38,8 +39,7 @@ export default function RelatedProducts({
             to="/products"
             className="font-semibold text-[#a27d4f] hover:underline"
           >
-            View All Products →
-          </Link>
+            {tr("View All Products →")}</Link>
 
         </div>
 
@@ -52,7 +52,7 @@ export default function RelatedProducts({
               name={product.name}
               image={product.image}
               category={product.category}
-              description={product.description}
+              description={tr(product.description)}
               slug={product.slug}
             />
 

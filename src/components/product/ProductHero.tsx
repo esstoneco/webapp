@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -12,11 +13,13 @@ export default function ProductHero({
   category,
   image,
 }: Props) {
+  const tr = useText();
+
   return (
     <section className="relative min-h-[75vh] overflow-hidden">
       <img
         src={image}
-        alt={name}
+        alt={tr(name)}
         className="absolute inset-0 h-full w-full object-cover"
       />
 
@@ -32,19 +35,18 @@ export default function ProductHero({
         >
 
           <p className="mb-4 uppercase tracking-[6px] text-stone-300">
-            {category}
+            {tr(category)}
           </p>
 
           <h1 className="mb-8 text-6xl font-bold md:text-7xl lg:text-8xl">
-            {name}
+            {tr(name)}
           </h1>
 
           <Link
             to="/contact"
             className="inline-block rounded-full bg-[#C8A97E] px-8 py-4 font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#b08f65]"
           >
-            Request a Quote
-          </Link>
+            {tr("Request a Quote")}</Link>
 
         </motion.div>
 

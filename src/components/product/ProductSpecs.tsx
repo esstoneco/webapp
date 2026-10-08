@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import {
   FaMapMarkerAlt,
   FaCube,
@@ -23,6 +24,8 @@ type Props = {
 export default function ProductSpecs({
   specifications,
 }: Props) {
+  const tr = useText();
+
   const specs = [
     {
       icon: <FaMapMarkerAlt />,
@@ -66,12 +69,10 @@ export default function ProductSpecs({
           <div className="mb-16 text-center">
 
             <p className="mb-3 uppercase tracking-[6px] text-stone-500">
-              Technical Data
-            </p>
+              {tr("Technical Data")}</p>
 
             <h2 className="text-5xl font-bold">
-              Specifications
-            </h2>
+              {tr("Specifications")}</h2>
 
           </div>
 
@@ -87,15 +88,15 @@ export default function ProductSpecs({
             >
 
               <div className="mb-5 text-2xl text-[#C8A97E]">
-                {spec.icon}
+                {tr(spec.icon)}
               </div>
 
               <p className="mb-2 text-sm uppercase tracking-wider text-stone-500">
-                {spec.label}
+                {tr(spec.label)}
               </p>
 
               <p className="text-xl font-semibold">
-                {spec.value}
+                {tr(spec.value)}
               </p>
 
             </div>

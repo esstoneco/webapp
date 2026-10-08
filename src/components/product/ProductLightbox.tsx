@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -25,6 +26,8 @@ export default function ProductLightbox({
   onNext,
   onSelect,
 }: Props) {
+  const tr = useText();
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -69,7 +72,7 @@ export default function ProductLightbox({
             event.stopPropagation();
             onClose();
           }}
-          aria-label="Close gallery"
+          aria-label={tr("Close gallery")}
           className="absolute right-5 top-5 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20"
         >
           <FaTimes />
@@ -78,7 +81,7 @@ export default function ProductLightbox({
         {/* IMAGE COUNTER */}
 
         <div className="absolute left-5 top-5 z-[110] rounded-full bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-md">
-          {selectedIndex + 1} / {images.length}
+          {selectedIndex + 1} / {tr(images.length)}
         </div>
 
         {/* PREVIOUS BUTTON */}
@@ -89,7 +92,7 @@ export default function ProductLightbox({
             event.stopPropagation();
             onPrevious();
           }}
-          aria-label="Previous image"
+          aria-label={tr("Previous image")}
           className="absolute left-4 top-1/2 z-[110] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 md:left-8 md:h-14 md:w-14"
         >
           <FaChevronLeft />
@@ -103,7 +106,7 @@ export default function ProductLightbox({
             event.stopPropagation();
             onNext();
           }}
-          aria-label="Next image"
+          aria-label={tr("Next image")}
           className="absolute right-4 top-1/2 z-[110] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 md:right-8 md:h-14 md:w-14"
         >
           <FaChevronRight />
@@ -120,7 +123,7 @@ export default function ProductLightbox({
           <motion.img
             key={`${images[selectedIndex]}-${selectedIndex}`}
             src={images[selectedIndex]}
-            alt={`${name} ${selectedIndex + 1}`}
+            alt={`${tr(name)} ${selectedIndex + 1}`}
             initial={{
               opacity: 0,
               scale: 0.96,
@@ -138,7 +141,7 @@ export default function ProductLightbox({
           {/* PRODUCT NAME */}
 
           <p className="mt-5 text-center text-lg font-medium text-white">
-            {name}
+            {tr(name)}
           </p>
 
           {/* THUMBNAILS */}
@@ -160,7 +163,7 @@ export default function ProductLightbox({
               >
                 <img
                   src={image}
-                  alt={`${name} thumbnail ${index + 1}`}
+                  alt={`${tr(name)} — ${index + 1}`}
                   className="h-full w-full object-cover"
                 />
               </button>

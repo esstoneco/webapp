@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +16,8 @@ export default function ProductGallery({
   images,
   name,
 }: Props) {
+  const tr = useText();
+
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -58,7 +61,7 @@ export default function ProductGallery({
 
               <img
                 src={selectedImage}
-                alt={name}
+                alt={tr(name)}
                 className="h-[600px] w-full object-cover transition duration-700 group-hover:scale-[1.02]"
               />
 
@@ -67,8 +70,7 @@ export default function ProductGallery({
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition duration-300 group-hover:bg-black/20">
 
                 <span className="rounded-full bg-white/90 px-6 py-3 text-sm font-semibold opacity-0 shadow-lg transition duration-300 group-hover:opacity-100">
-                  View Fullscreen
-                </span>
+                  {tr("View Fullscreen")}</span>
 
               </div>
 
@@ -99,7 +101,7 @@ export default function ProductGallery({
 
                       <img
                         src={image}
-                        alt={`${name} ${index + 1}`}
+                        alt={`${tr(name)} ${index + 1}`}
                         className="h-24 w-full object-cover"
                       />
 
@@ -132,7 +134,7 @@ export default function ProductGallery({
 
                   <img
                     src={image}
-                    alt={`${name} ${index + 1}`}
+                    alt={`${tr(name)} ${index + 1}`}
                     className="h-28 w-full object-cover"
                   />
 
