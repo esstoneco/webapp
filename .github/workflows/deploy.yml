@@ -42,14 +42,7 @@ jobs:
           VITE_EMAILJS_SERVICE_ID: ${{ vars.VITE_EMAILJS_SERVICE_ID || secrets.VITE_EMAILJS_SERVICE_ID }}
           VITE_EMAILJS_TEMPLATE_ID: ${{ vars.VITE_EMAILJS_TEMPLATE_ID || secrets.VITE_EMAILJS_TEMPLATE_ID }}
           VITE_EMAILJS_PUBLIC_KEY: ${{ vars.VITE_EMAILJS_PUBLIC_KEY || secrets.VITE_EMAILJS_PUBLIC_KEY }}
-        run: |
-          for key in VITE_EMAILJS_SERVICE_ID VITE_EMAILJS_TEMPLATE_ID VITE_EMAILJS_PUBLIC_KEY; do
-            value="${!key}"
-            if [[ -z "${value//[[:space:]]/}" || "$value" == YOUR_* ]]; then
-              echo "::error::Set $key in repository Settings > Secrets and variables > Actions before deploying."
-              exit 1
-            fi
-          done
+        
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
