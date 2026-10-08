@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 
 import type { ReactNode } from "react";
 
@@ -10,11 +11,13 @@ export default function Container({
   children,
   className = "",
 }: Props) {
+  const tr = useText();
+
   return (
     <div
       className={`mx-auto max-w-7xl px-6 lg:px-10 ${className}`}
     >
-      {children}
+      {tr(children)}
     </div>
   );
 }

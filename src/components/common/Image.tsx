@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 type Props = {
   src: string;
   alt: string;
@@ -9,10 +10,12 @@ export default function Image({
   alt,
   className = "",
 }: Props) {
+  const tr = useText();
+
   return (
     <img
       src={src}
-      alt={alt}
+      alt={tr(alt)}
       loading="lazy"
       className={className}
     />

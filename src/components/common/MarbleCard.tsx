@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -15,6 +16,8 @@ export default function MarbleCard({
   description,
   slug,
 }: Props) {
+  const tr = useText();
+
   return (
     <div className="group overflow-hidden rounded-[28px] border border-stone-200 bg-white shadow-sm transition duration-500 hover:-translate-y-3 hover:shadow-2xl">
 
@@ -22,7 +25,7 @@ export default function MarbleCard({
 
         <img
           src={image}
-          alt={name}
+          alt={tr(name)}
           loading="lazy"
           className="h-80 w-full object-cover transition duration-700 group-hover:scale-110"
         />
@@ -32,25 +35,24 @@ export default function MarbleCard({
       <div className="p-8">
 
         <span className="inline-block rounded-full bg-stone-100 px-4 py-2 text-sm text-stone-600">
-          {category}
+          {tr(category)}
         </span>
 
         <h2 className="mt-5 text-4xl font-semibold">
-          {name}
+          {tr(name)}
         </h2>
 
         <hr className="my-5 border-stone-200" />
 
         <p className="leading-7 text-gray-600">
-          {description}
+          {tr(description)}
         </p>
 
         <Link
           to={`/products/${slug}`}
           className="mt-7 inline-block rounded-full bg-black px-7 py-3 font-semibold text-white transition hover:bg-stone-800"
         >
-          Explore Marble
-        </Link>
+          {tr("Explore Marble")}</Link>
 
       </div>
 

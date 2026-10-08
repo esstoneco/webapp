@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
@@ -8,6 +9,8 @@ type Props = {
 export default function FadeIn({
   children,
 }: Props) {
+  const tr = useText();
+
   return (
     <motion.div
       initial={{
@@ -25,7 +28,7 @@ export default function FadeIn({
         duration: .7,
       }}
     >
-      {children}
+      {tr(children)}
     </motion.div>
   );
 }

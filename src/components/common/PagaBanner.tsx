@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 
 type Props = {
   title: string;
@@ -10,6 +11,8 @@ export default function PageBanner({
   subtitle,
   image,
 }: Props) {
+  const tr = useText();
+
   return (
     <section
       className="relative flex h-[420px] items-center justify-center overflow-hidden"
@@ -27,12 +30,12 @@ export default function PageBanner({
 
       <div className="relative z-10 text-center text-white">
         <h1 className="mb-4 text-6xl font-bold">
-          {title}
+          {tr(title)}
         </h1>
 
         {subtitle && (
           <p className="text-xl text-stone-200">
-            {subtitle}
+            {tr(subtitle)}
           </p>
         )}
       </div>

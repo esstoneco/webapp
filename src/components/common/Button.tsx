@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import type { ButtonHTMLAttributes } from "react";
 import clsx from "clsx";
 
@@ -11,6 +12,8 @@ export default function Button({
   children,
   ...props
 }: Props) {
+  const tr = useText();
+
   return (
     <button
       className={clsx(
@@ -22,7 +25,7 @@ export default function Button({
       )}
       {...props}
     >
-      {children}
+      {tr(children)}
     </button>
   );
 }

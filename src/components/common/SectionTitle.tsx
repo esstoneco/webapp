@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 type Props = {
     title: string;
     subtitle?: string;
@@ -7,6 +8,8 @@ export default function SectionTitle({
     title,
     subtitle,
 }: Props) {
+  const tr = useText();
+
     return (
 
         <div className="mb-16 text-center">
@@ -15,7 +18,7 @@ export default function SectionTitle({
 
                 <p className="mb-3 uppercase tracking-[6px] text-stone-500">
 
-                    {subtitle}
+                    {tr(subtitle)}
 
                 </p>
 
@@ -23,7 +26,7 @@ export default function SectionTitle({
 
             <h2 className="text-5xl font-bold">
 
-                {title}
+                {tr(title)}
 
             </h2>
 
