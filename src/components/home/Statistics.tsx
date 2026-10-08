@@ -1,4 +1,7 @@
+import { useText } from "../../i18n/useText";
 export default function Statistics() {
+  const tr = useText();
+
 
   const stats = [
     { number: "25+", title: "Years of Experience" },
@@ -13,11 +16,11 @@ export default function Statistics() {
         {stats.map((item) => (
           <div key={item.title} className="text-center">
             <h2 className="text-5xl font-bold text-white">
-              {item.number}
+              {tr(item.number)}
             </h2>
 
             <p className="mt-3 text-stone-300">
-              {item.title}
+              {tr(item.title)}
             </p>
           </div>
         ))}

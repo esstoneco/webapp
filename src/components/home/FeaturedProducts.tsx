@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import extraWhite from "../../assets/images/products/extra-white.jpg";
 import blackVeins from "../../assets/images/products/black-veins.jpg";
 import WhiteVeins from "../../assets/images/products/white-veins.jpg";
@@ -29,6 +30,8 @@ image:pinkVeins
 ];
 
 export default function FeaturedProducts(){
+  const tr = useText();
+
 
 return(
 
@@ -38,9 +41,7 @@ return(
 
 <h2 className="mb-12 text-center text-5xl font-bold">
 
-Featured Collection
-
-</h2>
+{tr("Featured Collection")}</h2>
 
 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 
@@ -55,14 +56,14 @@ className="overflow-hidden rounded-xl bg-white shadow-lg transition hover:-trans
 
 <img
 src={item.image}
-alt={item.name}
+alt={tr(item.name)}
 />
 
 <div className="p-6">
 
 <h3 className="text-2xl font-bold">
 
-{item.name}
+{tr(item.name)}
 
 </h3>
 

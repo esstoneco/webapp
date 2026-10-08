@@ -1,14 +1,17 @@
+import { useText } from "../../i18n/useText";
 import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 import ProjectCard from "../projects/ProjectCard";
 
 export default function ProjectsPreview() {
+  const tr = useText();
+
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-6">
 
         <div className="mb-16 text-center">
-          <h2 className="text-5xl font-bold">Recent Projects</h2>
+          <h2 className="text-5xl font-bold">{tr("Recent Projects")}</h2>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -22,8 +25,7 @@ export default function ProjectsPreview() {
             to="/projects"
             className="rounded-full bg-black px-8 py-4 text-white transition hover:bg-stone-800"
           >
-            View All Projects
-          </Link>
+            {tr("View All Projects")}</Link>
         </div>
 
       </div>

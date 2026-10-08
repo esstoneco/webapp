@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import {
   FaGem,
   FaGlobeEurope,
@@ -35,6 +36,8 @@ const features = [
 ];
 
 export default function WhyChooseUs() {
+  const tr = useText();
+
   return (
     <section className="bg-stone-100 py-24">
 
@@ -43,12 +46,10 @@ export default function WhyChooseUs() {
         <div className="mb-16 text-center">
 
           <p className="mb-3 uppercase tracking-[6px] text-stone-500">
-            Excellence
-          </p>
+            {tr("Excellence")}</p>
 
           <h2 className="text-5xl font-bold">
-            Why Choose ES STONE IKE
-          </h2>
+            {tr("Why Choose ES STONE IKE")}</h2>
 
         </div>
 

@@ -1,8 +1,11 @@
+import { useText } from "../../i18n/useText";
 import { motion } from "framer-motion";
 import hero from "../../assets/images/hero.jpg";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
+  const tr = useText();
+
   return (
     <section className="relative h-screen overflow-hidden">
 
@@ -10,7 +13,7 @@ export default function Hero() {
 
       <img
         src={hero}
-        alt="Marble"
+        alt={tr("Marble")}
         className="absolute inset-0 h-full w-full object-cover"
       />
 
@@ -26,8 +29,7 @@ export default function Hero() {
             transition={{ duration:1 }}
             className="mb-6 text-6xl font-bold lg:text-8xl"
           >
-            ES STONE IKE
-          </motion.h1>
+            {tr("ES STONE IKE")}</motion.h1>
 
           <motion.p
             initial={{ opacity:0 }}
@@ -39,28 +41,19 @@ export default function Hero() {
 
 <p className="mb-6 tracking-[8px] uppercase text-stone-300">
 
-Premium Greek Marble
-
-</p>
+{tr("Premium Greek Marble")}</p>
 
 <h1 className="mb-8 text-6xl font-bold lg:text-8xl">
 
-Natural Beauty
+{tr("Natural Beauty")}<span className="block text-stone-300">
 
-<span className="block text-stone-300">
-
-Timeless Elegance
-
-</span>
+{tr("Timeless Elegance")}</span>
 
 </h1>
 
 <p className="mx-auto mb-12 max-w-2xl text-xl leading-9 text-gray-200">
 
-From the Nestos quarry to prestigious
-architectural projects around the world.
-
-</p>
+{tr("From the Nestos quarry to prestigious architectural projects around the world.")}</p>
 
 </div>
           </motion.p>
@@ -71,7 +64,7 @@ architectural projects around the world.
             whileTap={{ scale:.95 }}
             className="rounded-full bg-white px-8 py-4 font-semibold text-black"
           >
-           <Link to="/products"> Explore Collection </Link>
+           <Link to="/products"> {tr("Explore Collection")}</Link>
           </motion.a>
 
         </div>
