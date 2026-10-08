@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 type Props={
 
 active:string;
@@ -31,6 +32,8 @@ active,
 setActive
 
 }:Props){
+  const tr = useText();
+
 
 return(
 
@@ -66,7 +69,7 @@ active===category
 
 >
 
-{category}
+{tr(category)}
 
 </button>
 

@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 
 type Props={
 
@@ -36,6 +37,8 @@ description,
 image
 
 }:Props){
+  const tr = useText();
+
 
 return(
 
@@ -47,7 +50,7 @@ return(
 
 src={image}
 
-alt={title}
+alt={tr(title)}
 
 className="h-80 w-full object-cover transition duration-700 hover:scale-110"
 
@@ -59,19 +62,19 @@ className="h-80 w-full object-cover transition duration-700 hover:scale-110"
 
 <span className="rounded-full bg-stone-200 px-4 py-2 text-sm">
 
-{category}
+{tr(category)}
 
 </span>
 
 <h2 className="text-3xl font-bold">
 
-{title}
+{tr(title)}
 
 </h2>
 
 <p className="text-gray-600">
 
-{description}
+{tr(description)}
 
 </p>
 
@@ -79,25 +82,25 @@ className="h-80 w-full object-cover transition duration-700 hover:scale-110"
 
 <div>
 
-<strong>Location</strong>
+<strong>{tr("Location")}</strong>
 
-<p>{location}</p>
-
-</div>
-
-<div>
-
-<strong>Year</strong>
-
-<p>{year}</p>
+<p>{tr(location)}</p>
 
 </div>
 
 <div>
 
-<strong>Marble</strong>
+<strong>{tr("Year")}</strong>
 
-<p>{marble}</p>
+<p>{tr(year)}</p>
+
+</div>
+
+<div>
+
+<strong>{tr("Marble")}</strong>
+
+<p>{tr(marble)}</p>
 
 </div>
 
