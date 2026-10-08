@@ -1,8 +1,11 @@
+import { useText } from "../../i18n/useText";
 
 
 import {Link} from "react-router-dom";
 
 export default function Footer() {
+  const tr = useText();
+
   return (
     <footer className="bg-black py-10 text-center text-white">
      
@@ -14,17 +17,11 @@ export default function Footer() {
 
           <h2 className="mb-6 text-3xl font-bold">
 
-            ES STONE IKE
-
-          </h2>
+            {tr("ES STONE IKE")}</h2>
 
           <p className="text-stone-400 leading-8">
 
-            Premium Greek natural marble
-            for architectural and luxury
-            construction projects worldwide.
-
-          </p>
+            {tr("Premium Greek natural marble for architectural and luxury construction projects worldwide.")}</p>
 
         </div>
 
@@ -32,21 +29,19 @@ export default function Footer() {
 
           <h3 className="mb-6 text-xl">
 
-            Navigation
-
-          </h3>
+            {tr("Navigation")}</h3>
 
           <div className="space-y-3">
 
-            <Link to="/">Home</Link><br/>
+            <Link to="/">{tr("Home")}</Link><br/>
 
-            <Link to="/products">Products</Link><br/>
+            <Link to="/products">{tr("Products")}</Link><br/>
 
-            <Link to="/projects">Projects</Link><br/>
+            <Link to="/projects">{tr("Projects")}</Link><br/>
 
-            <Link to="/history">History</Link><br/>
+            <Link to="/history">{tr("History")}</Link><br/>
 
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">{tr("Contact")}</Link>
 
           </div>
 
@@ -56,19 +51,13 @@ export default function Footer() {
 
           <h3 className="mb-6 text-xl">
 
-            Contact
-
-          </h3>
+            {tr("Contact")}</h3>
 
           <p className="leading-8 text-stone-400">
 
-            Drama, Greece
+            {tr("Drama, Greece")}<br/>
 
-            <br/>
-
-            esstoneco@gmail.com
-
-            <br/>
+            {tr("esstoneco@gmail.com")}<br/>
 
             
 
@@ -84,9 +73,7 @@ export default function Footer() {
 
       <div className="border-t border-stone-800 py-6 text-center text-stone-500">
 
-        © 2026 ES STONE IKE. All Rights Reserved.
-
-      </div>
+        {tr("© 2026 ES STONE IKE. All Rights Reserved.")}</div>
     </footer>
   );
 }

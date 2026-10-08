@@ -1,3 +1,5 @@
+import LanguageSelector from "./LanguageSelector";
+import { useText } from "../../i18n/useText";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -12,26 +14,27 @@ const links = [
 ];
 
 export default function Navbar() {
+  const tr = useText();
+
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
 
-        <div className="mx-auto max-w-7xl px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6">
 
           <div className="mt-4 rounded-full border border-white/20 bg-black/30 backdrop-blur-xl">
 
-            <div className="flex h-20 items-center justify-between px-8">
+            <div className="flex h-20 items-center justify-between gap-3 px-4 sm:px-6">
 
               <Link
                 to="/"
-                className="text-2xl font-bold tracking-wide text-white"
+                className="shrink-0 text-base font-bold tracking-wide text-white sm:text-xl"
               >
-                ES STONE IKE
-              </Link>
+                {tr("ES STONE IKE")}</Link>
 
-              <nav className="hidden gap-10 lg:flex">
+              <nav className="hidden gap-5 xl:gap-8 lg:flex">
 
                 {links.map((link) => (
                   <NavLink
@@ -45,18 +48,24 @@ export default function Navbar() {
                       }`
                     }
                   >
-                    {link.name}
+                    {tr(link.name)}
                   </NavLink>
                 ))}
 
               </nav>
 
+              <div className="flex items-center gap-3">
+              <LanguageSelector />
               <button
+                type="button"
+                aria-label={tr(open ? "Close menu" : "Open menu")}
+                aria-expanded={open}
                 onClick={() => setOpen(!open)}
                 className="text-2xl text-white lg:hidden"
               >
                 {open ? <FaTimes /> : <FaBars />}
               </button>
+              </div>
 
             </div>
 
@@ -86,7 +95,7 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="text-3xl text-white"
                 >
-                  {link.name}
+                  {tr(link.name)}
                 </NavLink>
               ))}
 
