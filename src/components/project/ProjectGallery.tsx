@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { useState } from "react";
 
 import ProjectLightbox from "./ProjectLightbox.tsx";
@@ -11,6 +12,8 @@ export default function ProjectGallery({
   images,
   title,
 }: Props) {
+  const tr = useText();
+
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -55,15 +58,14 @@ export default function ProjectGallery({
 
               <img
                 src={selectedImage}
-                alt={title}
+                alt={tr(title)}
                 className="h-[600px] w-full object-cover transition duration-700 group-hover:scale-[1.02]"
               />
 
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition group-hover:bg-black/20">
 
                 <span className="rounded-full bg-white/90 px-6 py-3 text-sm font-semibold opacity-0 shadow-lg transition group-hover:opacity-100">
-                  View Fullscreen
-                </span>
+                  {tr("View Fullscreen")}</span>
 
               </div>
 
@@ -88,7 +90,7 @@ export default function ProjectGallery({
 
                   <img
                     src={image}
-                    alt={`${title} ${index + 1}`}
+                    alt={`${tr(title)} ${index + 1}`}
                     className="h-28 w-full object-cover"
                   />
 
@@ -117,7 +119,7 @@ export default function ProjectGallery({
 
                   <img
                     src={image}
-                    alt={`${title} ${index + 1}`}
+                    alt={`${tr(title)} ${index + 1}`}
                     className="h-full w-full object-cover"
                   />
 
@@ -136,7 +138,7 @@ export default function ProjectGallery({
       {lightboxOpen && (
         <ProjectLightbox
           images={images}
-          title={title}
+          title={tr(title)}
           selectedIndex={selectedIndex}
           onClose={() => setLightboxOpen(false)}
           onPrevious={handlePrevious}

@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -13,12 +14,14 @@ export default function ProjectHero({
   location,
   image,
 }: Props) {
+  const tr = useText();
+
   return (
     <section className="relative min-h-[75vh] overflow-hidden">
 
       <img
         src={image}
-        alt={title}
+        alt={tr(title)}
         className="absolute inset-0 h-full w-full object-cover"
       />
 
@@ -42,18 +45,18 @@ export default function ProjectHero({
         >
 
           <p className="mb-4 uppercase tracking-[6px] text-stone-300">
-            {category}
+            {tr(category)}
           </p>
 
           <h1 className="mb-6 text-5xl font-bold md:text-7xl lg:text-8xl">
-            {title}
+            {tr(title)}
           </h1>
 
           <div className="flex items-center gap-3 text-lg text-stone-200">
 
             <span>📍</span>
 
-            <span>{location}</span>
+            <span>{tr(location)}</span>
 
           </div>
 

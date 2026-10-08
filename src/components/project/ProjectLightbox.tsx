@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { useEffect } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -27,6 +28,8 @@ export default function ProjectLightbox({
   onNext,
   onSelect,
 }: Props) {
+  const tr = useText();
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -90,7 +93,7 @@ export default function ProjectLightbox({
         {/* Counter */}
 
         <div className="absolute left-5 top-5 z-[110] rounded-full bg-white/10 px-5 py-3 text-sm text-white backdrop-blur-md">
-          {selectedIndex + 1} / {images.length}
+          {selectedIndex + 1} / {tr(images.length)}
         </div>
 
         {/* Previous */}
@@ -129,7 +132,7 @@ export default function ProjectLightbox({
           <motion.img
             key={`${images[selectedIndex]}-${selectedIndex}`}
             src={images[selectedIndex]}
-            alt={`${title} ${selectedIndex + 1}`}
+            alt={`${tr(title)} ${selectedIndex + 1}`}
             initial={{
               opacity: 0,
               scale: 0.96,
@@ -145,7 +148,7 @@ export default function ProjectLightbox({
           />
 
           <p className="mt-5 text-center text-lg font-medium text-white">
-            {title}
+            {tr(title)}
           </p>
 
           {/* Thumbnails */}
@@ -171,7 +174,7 @@ export default function ProjectLightbox({
 
                 <img
                   src={image}
-                  alt={`${title} thumbnail ${index + 1}`}
+                  alt={`${tr(title)} — ${index + 1}`}
                   className="h-full w-full object-cover"
                 />
 

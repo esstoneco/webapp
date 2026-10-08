@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { Link } from "react-router-dom";
 
 import { projects } from "../../data/projects";
@@ -9,6 +10,8 @@ type Props = {
 export default function RelatedProjects({
   currentProjectId,
 }: Props) {
+  const tr = useText();
+
   const related = projects
     .filter(
       (project) => project.id !== currentProjectId
@@ -25,12 +28,10 @@ export default function RelatedProjects({
           <div>
 
             <p className="mb-3 uppercase tracking-[6px] text-stone-500">
-              Explore More
-            </p>
+              {tr("Explore More")}</p>
 
             <h2 className="text-5xl font-bold">
-              Related Projects
-            </h2>
+              {tr("Related Projects")}</h2>
 
           </div>
 
@@ -38,8 +39,7 @@ export default function RelatedProjects({
             to="/projects"
             className="font-semibold text-[#a27d4f] hover:underline"
           >
-            View All Projects →
-          </Link>
+            {tr("View All Projects →")}</Link>
 
         </div>
 
@@ -57,7 +57,7 @@ export default function RelatedProjects({
 
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={tr(project.title)}
                   loading="lazy"
                   className="h-80 w-full object-cover transition duration-700 group-hover:scale-110"
                 />
@@ -67,15 +67,15 @@ export default function RelatedProjects({
               <div className="p-7">
 
                 <p className="mb-2 text-sm uppercase tracking-wider text-stone-500">
-                  {project.category}
+                  {tr(project.category)}
                 </p>
 
                 <h3 className="mb-3 text-2xl font-bold">
-                  {project.title}
+                  {tr(project.title)}
                 </h3>
 
                 <p className="text-stone-500">
-                  {project.location}
+                  {tr(project.location)}
                 </p>
 
               </div>

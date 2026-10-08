@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -7,6 +8,8 @@ type Props = {
 export default function ProjectDescription({
   description,
 }: Props) {
+  const tr = useText();
+
   return (
     <section className="bg-stone-100 py-28">
 
@@ -30,15 +33,13 @@ export default function ProjectDescription({
         >
 
           <p className="mb-4 uppercase tracking-[6px] text-stone-500">
-            The Project
-          </p>
+            {tr("The Project")}</p>
 
           <h2 className="mb-8 text-5xl font-bold">
-            Architecture & Marble
-          </h2>
+            {tr("Architecture & Marble")}</h2>
 
           <p className="text-lg leading-9 text-gray-600">
-            {description}
+            {tr(description)}
           </p>
 
         </motion.div>

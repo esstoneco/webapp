@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import {
   FaCheck,
 } from "react-icons/fa";
@@ -9,6 +10,8 @@ type Props = {
 export default function ProjectScope({
   scope,
 }: Props) {
+  const tr = useText();
+
   return (
     <section className="py-24">
 
@@ -17,12 +20,10 @@ export default function ProjectScope({
         <div className="mb-12 text-center">
 
           <p className="mb-3 uppercase tracking-[6px] text-stone-500">
-            Our Work
-          </p>
+            {tr("Our Work")}</p>
 
           <h2 className="text-5xl font-bold">
-            Project Scope
-          </h2>
+            {tr("Project Scope")}</h2>
 
         </div>
 
@@ -42,7 +43,7 @@ export default function ProjectScope({
               </div>
 
               <span className="font-semibold">
-                {item}
+                {tr(item)}
               </span>
 
             </div>

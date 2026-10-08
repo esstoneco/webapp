@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 import {
   FaMapMarkerAlt,
   FaCalendarAlt,
@@ -20,6 +21,8 @@ export default function ProjectInfo({
   marble,
   client,
 }: Props) {
+  const tr = useText();
+
   const information = [
     {
       icon: <FaMapMarkerAlt />,
@@ -66,15 +69,15 @@ export default function ProjectInfo({
             >
 
               <div className="mb-5 text-2xl text-[#C8A97E]">
-                {item.icon}
+                {tr(item.icon)}
               </div>
 
               <p className="mb-2 text-sm uppercase tracking-wider text-stone-500">
-                {item.label}
+                {tr(item.label)}
               </p>
 
               <p className="text-lg font-semibold">
-                {item.value}
+                {tr(item.value)}
               </p>
 
             </div>
