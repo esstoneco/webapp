@@ -1,3 +1,4 @@
+import { useText } from "../../i18n/useText";
 type Props = {
     active: string;
     setActive: (category: string) => void;
@@ -14,6 +15,8 @@ export default function ProductFilter({
     active,
     setActive,
 }: Props) {
+  const tr = useText();
+
     return (
 
         <div className="mb-16 flex flex-wrap justify-center gap-4">
@@ -29,7 +32,7 @@ export default function ProductFilter({
                             : "bg-stone-200"
                     }`}
                 >
-                    {category}
+                    {tr(category)}
                 </button>
 
             ))}
