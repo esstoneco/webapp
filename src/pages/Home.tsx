@@ -8,6 +8,7 @@ import WhyChooseUs from "../components/home/WhyChooseUs";
 import FadeIn from "../components/common/FadeIn";
 import ProjectsPreview from "../components/home/ProjectsPreview";
 import PageBanner from "../components/common/PagaBanner";
+import ProjectsCarousel from "../components/home/ProjectsCarousel";
 
 export default function Home() {
   const tr = useText();
@@ -19,6 +20,7 @@ export default function Home() {
   title={tr("Our Projects")}
   subtitle={tr("Discover our completed marble installations")}
 />
+      <ProjectsCarousel />
       <FadeIn>
 
 <About/>
