@@ -11,6 +11,8 @@ import p1img1 from "../assets/images/projects/project1/banio23.png";
 import p1img2 from "../assets/images/projects/project1/file_000000002448820c8ca843fefffb8abd.png";
 import p1img3 from "../assets/images/projects/project1/file_000000003b1c820c9f3ce3ec9c6da1d7.png";
 import p1img4 from "../assets/images/projects/project1/file_00000000f28881f588914f3d27fe408f.png";
+import p4img1 from "../assets/images/projects/Project4/buildign4.jpg";
+import p4img2 from "../assets/images/projects/Project4/file_00000000ca9c81f490a55b18758016ea.png";
 
 
 export const projects: Project[] = [
@@ -198,6 +200,42 @@ export const projects: Project[] = [
     ],
 
     client: "Commercial Client",
+  },
+  {
+    id: 6,
+
+    slug: "luxury-building-thessaloniki",
+
+    title: "Luxury Building Thessaloniki",
+
+    location: "Thessaloniki, Greece",
+
+    year: "2022",
+
+    category: "Hospitality",
+
+    marble: "Nestos Extra White",
+
+    image: p4img1,
+
+    gallery: [
+      p4img1,
+      p4img2,
+      
+    ],
+
+    description:
+      "A hospitality project where natural Greek marble was used to create elegant interior and exterior architectural elements.",
+
+    scope: [
+      "Bathrooms",
+      "Kitchen",
+      "Flooring",
+      "Exterior Areas",
+      "Custom Elements",
+    ],
+
+    client: "Private Client",
   },
 
 ];
