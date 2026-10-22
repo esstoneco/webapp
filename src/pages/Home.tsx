@@ -9,6 +9,7 @@ import FadeIn from "../components/common/FadeIn";
 import ProjectsPreview from "../components/home/ProjectsPreview";
 import PageBanner from "../components/common/PagaBanner";
 import ProjectsCarousel from "../components/home/ProjectsCarousel";
+import MarbleConfigurator from "../components/configurator/MarbleConfigurator";
 
 export default function Home() {
   const tr = useText();
@@ -32,6 +33,8 @@ export default function Home() {
 <FeaturedProducts/>
 
 </FadeIn>
+
+<MarbleConfigurator />
 
 <FadeIn>
 
