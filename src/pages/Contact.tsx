@@ -143,7 +143,7 @@ export default function Contact() {
               <ContactItem
                 icon={<FaMapMarkerAlt />}
                 title={tr("Location")}
-                value="Northern Greece"
+                value="Drama, Greece"
               />
               <ContactItem
                 icon={<FaClock />}
