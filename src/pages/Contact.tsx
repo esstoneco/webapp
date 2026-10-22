@@ -1,5 +1,10 @@
 import { useText } from "../i18n/useText";
-import { useRef, useState, type FormEvent, type ReactNode } from "react";
+import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
+import { products } from "../data/products";
+import { parseConfigurationQuery } from "../components/configurator/marbleConfiguration";
+import { configurationSummary } from "../components/configurator/configuratorCopy";
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
@@ -10,12 +15,23 @@ import {
 
 export default function Contact() {
   const tr = useText();
+  const { i18n } = useTranslation();
+  const [searchParams] = useSearchParams();
+  const quoteConfiguration = parseConfigurationQuery(searchParams);
+  const quoteProduct = products.find((product) => product.slug === quoteConfiguration?.productSlug);
+  const quoteMessage = quoteConfiguration && quoteProduct
+    ? configurationSummary(quoteConfiguration, tr(quoteProduct.name), i18n.resolvedLanguage ?? "en")
+    : undefined;
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
   const submitting = useRef(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    if (quoteMessage) form.current?.scrollIntoView({ block: "start" });
+  }, [quoteMessage]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -143,7 +159,7 @@ export default function Contact() {
               <ContactItem
                 icon={<FaMapMarkerAlt />}
                 title={tr("Location")}
-                value="Drama, Greece"
+                value="Northern Greece"
               />
               <ContactItem
                 icon={<FaClock />}
@@ -182,7 +198,7 @@ export default function Contact() {
                 method="POST"
                 ref={form}
                 onSubmit={(event) => { void handleSubmit(event); }}
-                className="space-y-6"
+                className="scroll-mt-32 space-y-6"
               >
                 {/* FormSubmit settings: these do not change the form's design. */}
                 <input
@@ -192,6 +208,7 @@ export default function Contact() {
                 />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
+                {quoteMessage && <input type="hidden" name="marble_configuration" value={quoteMessage} />}
                 <input
                   type="text"
                   name="_honey"
@@ -310,6 +327,7 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
+                    defaultValue={quoteMessage}
                     required
                     rows={6}
                     placeholder={tr("Tell us about your project, marble requirements, approximate quantities, location, timeline...")}
